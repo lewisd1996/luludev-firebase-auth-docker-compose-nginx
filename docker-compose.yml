@@ -1,0 +1,23 @@
+services:
+  firebase-emulator:
+    container_name: firebase-emulator
+    build:
+      context: ./firebase-emulator
+      args:
+        - FIREBASE_VERSION=13.15.4
+    stop_grace_period: 1m
+    ports:
+      - 4000:4000 # UI_PORT
+      - 9099:9099 # AUTH_PORT
+    environment:
+      FIREBASE_PROJECT: "local-test"
+      GCLOUD_PROJECT: "local-test"
+      FORCE_COLOR: "true"
+      DATA_DIRECTORY: "data"
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ./firebase-emulator/firebase:/srv/firebase:rw
+    # Other services, e.g. your api, frontend, postgres, etc.
+  
+volumes:
+  firebase-data:
