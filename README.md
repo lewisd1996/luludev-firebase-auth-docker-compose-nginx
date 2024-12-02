@@ -1,6 +1,6 @@
 # Setting Up Firebase Authentication Locally with Docker Compose, Nginx, and Firebase Emulators
 
-This is a guide on how to set up Firebase Authentication locally with Docker Compose, Nginx, and Firebase Emulators. This guide is for developers who want to test Firebase Authentication locally, as part of their Docker Compose setup, without deploying to Firebase Hosting.
+This is a guide on how to set up Firebase Authentication locally with Docker Compose, Nginx, and Firebase Emulators.
 
 ## Blog Link
 
